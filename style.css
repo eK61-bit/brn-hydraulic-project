@@ -1,0 +1,354 @@
+/* Genel Özellikler */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+}
+
+/* ------------------ HEADER ----------------------- */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 9.6rem;
+  padding: 0 4.8rem;
+
+  background-color: #d1d1d1;
+}
+
+.logo {
+  width: 20rem;
+  height: auto;
+  filter: grayscale(100%) invert(100%) sepia(100%);
+}
+
+/* ------------------ NAVIGATION----------------------- */
+
+.main-nav {
+  filter: blur();
+}
+
+.main-nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 4.8rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+
+  color: #333;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #cf711f;
+}
+
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  position: relative;
+  width: 120px;
+  height: 40px;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  border: none;
+  padding: 12px;
+  gap: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.main-nav-link.nav-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: -4px;
+  top: -1px;
+  margin: auto;
+  width: 128px;
+  height: 48px;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+  z-index: -10;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.main-nav-link.nav-cta:hover::before {
+  transform: rotate(-180deg);
+  scale: 0.7;
+  filter: blur(0);
+}
+
+.main-nav-link.nav-cta::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(20px);
+}
+
+.main-nav-link.nav-cta:hover::after {
+  filter: blur(30px);
+}
+
+/* ------------------ HERO SECTION ----------------------- */
+
+.section-hero {
+  background-color: #d1d1d1;
+  padding: 1.2rem 0 9.6rem 0;
+}
+
+.hero {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 9.6rem 3.2rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+  gap: 9.6rem;
+}
+
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.6;
+
+  margin-bottom: 4.8rem;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+/* ------------------ WHO WE ARE SECTION ----------------------- */
+
+.section-how {
+  padding: 9.6rem 0;
+  position: relative;
+}
+
+.step-text-box::before {
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2px;
+  height: 80%;
+  background-color: #555;
+  z-index: -1;
+}
+
+/* İlk yuvarlak işaret */
+.step-text-box::after {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background-color: black;
+  border-radius: 50%;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* İkinci yuvarlak işaret */
+.time-line::before {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background-color: black;
+  border-radius: 50%;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Üçüncü yuvarlak işaret */
+.time-line::after {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background-color: black;
+  border-radius: 50%;
+  top: 81%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.step-number {
+  font-size: 8.6rem;
+  font-weight: 600;
+  color: #ddd;
+  margin-bottom: 1.2rem;
+}
+
+.step-description {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+/* .step-img-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.step-img {
+  height: 30vh;
+  border-radius: 50px;
+  /* z-index: 10; 
+} 
+*/
+
+/* ------------------ PRODUCT SECTION ----------------------- */
+
+.section-product {
+  padding: 9.6rem 0;
+  position: relative;
+}
+
+.product {
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.2);
+  border-radius: 11px;
+  overflow: hidden;
+
+  transition: all 0.4s;
+}
+
+.product:hover {
+  transform: translateY(-1.2rem);
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.5);
+}
+
+.product-content {
+  padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+}
+
+.product-tags {
+  margin-bottom: 1.2rem;
+  display: flex;
+  gap: 4px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 8px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+
+  color: #333;
+  border-radius: 100px;
+  font-weight: 600;
+}
+
+.tag--feature--1 {
+  background-color: #51cf66;
+}
+
+.tag--feature--2 {
+  background-color: #94d82d;
+}
+
+.tag--feature--3 {
+  background-color: #ffd43b;
+}
+
+.product-title {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 3.2rem;
+}
+
+.product-attributes {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.product-attribute {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.product-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  color: #266096;
+}
+
+.product-img {
+  width: 100%;
+  /* border-radius: 11px; */
+}
+
+.all-product-link {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+/* ------------------ GALLERY SECTION ----------------------- */
+
+.section-gallery {
+  background-color: #d1d1d1;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+
+.gallery-header {
+  margin-top: 4.8rem;
+}
+
+.gallery-container {
+  padding: 9.6rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.6rem;
+  padding: 1.6rem;
+}
+
+.gallery-item {
+  overflow: hidden;
+}
