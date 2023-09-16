@@ -154,14 +154,14 @@
 .section-hero {
   /* background-color: #e5e5e5; */
   background-image: linear-gradient(to top right, #e5e5e5, #b5b5b5);
-  padding: 1.2rem 0 9.6rem 0;
-  border-bottom: 1px solid white;
+
+  position: relative;
 }
 
 .hero {
   max-width: 130rem;
   margin: 0 auto;
-  padding: 9.6rem 3.2rem;
+  padding: 4.8rem 3.2rem;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
