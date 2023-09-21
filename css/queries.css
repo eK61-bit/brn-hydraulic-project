@@ -44,6 +44,17 @@
     gap: 3.2rem;
   }
 
+  .button-product-link:link,
+  .button-product-link:visited {
+    font-size: 12px;
+    padding: 0.4em 0.8em;
+  }
+
+  .button-product-link .svg-wrapper {
+    width: 25px;
+    height: 25px;
+  }
+
   .gallery {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -81,6 +92,17 @@
 
   .step-number {
     font-size: 7.4rem;
+  }
+
+  .button-product-link:link,
+  .button-product-link:visited {
+    font-size: 12px;
+    padding: 0.5em 0.6em;
+  }
+
+  .button-product-link .svg-wrapper {
+    width: 15px;
+    height: 15px;
   }
 
   .gallery {
@@ -176,6 +198,12 @@
 
   .heading-secondary {
     margin-bottom: 4.8rem;
+  }
+
+  .button-product-link:link,
+  .button-product-link:visited {
+    font-size: 10px;
+    padding: 0.5em 0.6em;
   }
 }
 /* ************************************ */

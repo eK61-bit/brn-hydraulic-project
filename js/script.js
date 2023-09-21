@@ -25,7 +25,7 @@ btnNavEl.addEventListener("click", function () {
 //     if (href === "#")
 //       window.scrollTo({
 //         top: 0,
-//         behavior: "smooth",
+//         behavior: "smooth",z
 //       });
 
 //     // Scroll to other links
