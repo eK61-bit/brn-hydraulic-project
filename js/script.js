@@ -14,28 +14,50 @@ btnNavEl.addEventListener("click", function () {
 // -----------------------------------------------------------------------
 
 // Smooth Scrolling Animations
+// const allLinks = document.querySelectorAll("a:link");
+// allLinks.forEach(function (link) {
+//   // olay
+//   link.addEventListener("click", function (event) {
+//     event.preventDefault();
+//     const href = link.getAttribute("href");
+
+//     // Scroll back to top
+//     if (href === "#")
+//       window.scrollTo({
+//         top: 0,
+//         behavior: "smooth",
+//       });
+
+//     // Scroll to other links
+//     if (href !== "#" && href.startsWith("#")) {
+//       const sectionEl = document.querySelector(href);
+//       sectionEl.scrollIntoView({ behavior: "smooth" });
+//     }
+
+//     if (link.classList.contains("main-nav-link"))
+//       headerEl.classList.toggle("nav-open");
+//   });
+// });
+
+// Smooth Scrolling Animations
 const allLinks = document.querySelectorAll("a:link");
 allLinks.forEach(function (link) {
-  // olay
   link.addEventListener("click", function (event) {
-    event.preventDefault();
     const href = link.getAttribute("href");
 
-    // Scroll back to top
-    if (href === "#")
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-
-    // Scroll to other links
     if (href !== "#" && href.startsWith("#")) {
+      event.preventDefault(); // Linki engellemeyin, sadece animasyon yapın.
       const sectionEl = document.querySelector(href);
-      sectionEl.scrollIntoView({ behavior: "smooth" });
+      if (sectionEl) {
+        sectionEl.scrollIntoView({
+          behavior: "smooth",
+        });
+      }
     }
 
-    if (link.classList.contains("main-nav-link"))
+    if (link.classList.contains("main-nav-link")) {
       headerEl.classList.toggle("nav-open");
+    }
   });
 });
 

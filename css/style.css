@@ -153,7 +153,7 @@
 
 .section-hero {
   /* background-color: #e5e5e5; */
-  background-image: linear-gradient(to top right, #e5e5e5, #b5b5b5);
+  background-image: linear-gradient(to top right, #e3e3e3, #c0c0c0);
 
   position: relative;
 }
@@ -184,6 +184,53 @@
 .hero-img {
   width: 100%;
   height: auto;
+}
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  z-index: 9999;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  animation: breathe 2s ease-in-out infinite;
+}
+
+.whatsapp-btn i {
+  color: #fff;
+  font-size: 24px;
+  animation: beat 1s ease-in-out infinite;
+  text-decoration: none;
+}
+
+@keyframes breathe {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* ------------------ WHO WE ARE SECTION ----------------------- */
@@ -532,7 +579,7 @@
 }
 
 .social-logo a:hover {
-  transform: translateY(-20px);
+  transform: translateY(-10px);
 }
 
 .social-logo a::before {
